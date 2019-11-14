@@ -1,19 +1,42 @@
+/*Pirmā līmeņa bērni*/
 .header {
     background: LightSkyBlue;
     grid-area: header;
     box-sizing: border-box;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "brand brand"
+    "nav tools";
       }
 
   .hero {
     background: lightskyblue;
     grid-area: hero;
     box-sizing: border-box;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "hero2"
+    "hero2";
   }
 
   .body {
     background: lightskyblue;
     grid-area: body;
     box-sizing: border-box;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas:
+    "artfea"
+    "inadv"
+    "artlist"
   }
 
   .advert {
@@ -21,27 +44,75 @@
     grid-area: advert;
     box-sizing: border-box;
     display: none;
-
   }
+
   .sidebar {
     background: lightskyblue;
     grid-area: sidebar;
     box-sizing: border-box;
     display: none;
   }
+
   .footer {
-  background: lightskyblue;
+  background: hsl(203, 92%, 75%);
     grid-area: footer;
+    box-sizing: border-box;
+    display: grid;
+
+  }
+  /* Otrā līmeņa bērni */
+  .brand {
+    background-color: rgb(177, 236, 248);
+    grid-area: brand;
+    box-sizing: border-box;
+  }
+  .nav {
+    background-color: rgb(177, 236, 248);
+    grid-area: nav;
+    box-sizing: border-box;
+  }
+  .tools{
+    background-color: rgb(177, 236, 248);
+    grid-area: tools;
+    box-sizing: border-box;
+  }
+  .hero-feature{
+    background-color: rgb(177, 236, 248);
+    grid-area: hero1;
+    box-sizing: border-box;
+    display: none;
+  }
+  .hero-call-to-action{
+    background-color: rgb(177, 236, 248);
+    grid-area: hero2;
     box-sizing: border-box;
 
   }
+  .article-features{
+    background-color: rgb(177, 236, 248);
+    grid-area: artfea;
+    box-sizing: border-box;
+  }
+  .inner-advert{
+    background-color: rgb(177, 236, 248);
+    grid-area: inadv;
+    box-sizing: border-box;
+  }
+  .article-listing{
+    background-color: rgb(177, 236, 248);
+    grid-area: artlist;
+    box-sizing: border-box;
+  }
+
+
+  /*konteineri dažādiem ekrāna izmēriem*/
+
   .container {
     font-size: 1.5em;
     box-sizing: border-box;
-    min-height: 300px;
     height: 100vh;
     width: 100%;
-    background: rgb(68, 65, 214);
+    background: rgba(50, 127, 243, 0.822);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(12, 1fr);
@@ -75,6 +146,30 @@
       "sidebar"
       "footer";
     }
+    .hero-feature{
+      display: block;
+    }
+        .header{
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "brand nav tools";
+        }
+        .hero{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "hero1"
+        "hero2";
+        }
+        .body{
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 2fr 4fr;
+        grid-template-areas:
+        "artfea inadv"
+        "artlist artlist";
+        }
+
   }
 
   @media (min-width: 992px){
