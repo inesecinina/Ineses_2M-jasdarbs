@@ -1,6 +1,6 @@
+
 /*Pirmā līmeņa bērni*/
 .header {
-    background: LightSkyBlue;
     grid-area: header;
     box-sizing: border-box;
     display: grid;
@@ -13,7 +13,6 @@
       }
 
   .hero {
-    background: lightskyblue;
     grid-area: hero;
     box-sizing: border-box;
     display: grid;
@@ -26,7 +25,6 @@
   }
 
   .body {
-    background: lightskyblue;
     grid-area: body;
     box-sizing: border-box;
     display: grid;
@@ -40,68 +38,82 @@
   }
 
   .advert {
-    background: rgb(195, 182, 255);
+    background: rgb(226, 206, 206);
     grid-area: advert;
     box-sizing: border-box;
+    border-radius: 10px;
     display: none;
+    background-image: url(/zabaki.jpg);
   }
 
   .sidebar {
-    background: lightskyblue;
+    background:rgb(226, 206, 206);
     grid-area: sidebar;
     box-sizing: border-box;
+    border-radius: 10px;
     display: none;
   }
 
   .footer {
-  background: hsl(203, 92%, 75%);
+    background: rgb(226, 206, 206);
     grid-area: footer;
     box-sizing: border-box;
+    border-radius: 10px;
     display: grid;
 
   }
   /* Otrā līmeņa bērni */
   .brand {
-    background-color: rgb(177, 236, 248);
+    background-color: rgb(226, 206, 206);
     grid-area: brand;
     box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
   }
   .nav {
-    background-color: rgb(177, 236, 248);
+    background-color: rgb(226, 206, 206);
     grid-area: nav;
     box-sizing: border-box;
+    border-radius: 10px;
   }
   .tools{
-    background-color: rgb(177, 236, 248);
+    background-color: rgb(226, 206, 206);
     grid-area: tools;
     box-sizing: border-box;
+    border-radius: 10px;
   }
   .hero-feature{
-    background-color: rgb(177, 236, 248);
+    background-color: rgb(226, 206, 206);
     grid-area: hero1;
     box-sizing: border-box;
     display: none;
+    border-radius: 10px;
   }
   .hero-call-to-action{
-    background-color: rgb(177, 236, 248);
+    background-color: rgb(226, 206, 206);
     grid-area: hero2;
     box-sizing: border-box;
+    border-radius: 10px;
 
   }
   .article-features{
-    background-color: rgb(177, 236, 248);
+    background-color: rgb(226, 206, 206);
     grid-area: artfea;
     box-sizing: border-box;
+    border-radius: 10px;
   }
   .inner-advert{
-    background-color: rgb(177, 236, 248);
+    background-color: rgb(226, 206, 206);
     grid-area: inadv;
     box-sizing: border-box;
+    border-radius: 10px;
+    background-image: url(/zabaki.jpg);
   }
   .article-listing{
-    background-color: rgb(177, 236, 248);
+    background-color: rgb(226, 206, 206);
     grid-area: artlist;
     box-sizing: border-box;
+    border-radius: 10px;
   }
 
 
@@ -112,22 +124,13 @@
     box-sizing: border-box;
     height: 100vh;
     width: 100%;
-    background: rgba(50, 127, 243, 0.822);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: 3fr 2fr 6fr 1fr;
     grid-gap: 10px;
     grid-template-areas:
       "header"
-      "header"
-      "header"
       "hero"
-      "hero"
-      "body"
-      "body"
-      "body"
-      "body"
-      "body"
       "body"
       "footer";
   }
@@ -180,7 +183,7 @@
     height: 100vh;
     grid-template-columns: 9fr 3fr;
     grid-template-rows: 2fr 3fr 6fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
     grid-template-areas:
     "header header"
     "hero advert "
@@ -188,7 +191,7 @@
     "footer footer";
     }
       .header{
-        grid-template-columns: 3fr 7fr 3fr;
+        grid-template-columns: 2fr 7fr 3fr;
         grid-template-rows: 1fr;
         grid-template-areas:
         "brand nav tools";
