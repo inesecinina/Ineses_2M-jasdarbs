@@ -37,6 +37,7 @@
     font-size: 1.5em;
     box-sizing: border-box;
     min-height: 300px;
+    height: 100%;
     width: 100%;
     background: LightGray;
     display: grid;
@@ -60,6 +61,7 @@
 
   @media (min-width:576px){
     .container{
+    height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(12, 1fr);
     grid-gap: 10px;
@@ -80,7 +82,7 @@
 
   @media (min-width: 992px){
     .container{
-     
+    height: 100%;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
     grid-gap: 10px;
