@@ -20,12 +20,14 @@
     background: rgb(195, 182, 255);
     grid-area: advert;
     box-sizing: border-box;
+    display: none;
 
   }
   .sidebar {
     background: greenyellow;
     grid-area: sidebar;
     box-sizing: border-box;
+    display: none;
   }
   .footer {
   background: lightpink;
@@ -60,6 +62,7 @@
   }
 
   @media (min-width:576px){
+    .sidebar{display: block;}
     .container{
     height: 100%;
     grid-template-columns: 1fr;
@@ -81,6 +84,8 @@
   }
 
   @media (min-width: 992px){
+    .advert{display: block;}
+    .sidebar{ display: block;}
     .container{
     height: 100%;
     grid-template-columns: repeat(12, 1fr);
