@@ -175,6 +175,7 @@
   @media (min-width: 992px){
     .advert{display: block;}
     .sidebar{ display: block;}
+    .inner-advert{display: none;}
     .container{
     height: 100vh;
     grid-template-columns: 9fr 3fr;
@@ -186,4 +187,22 @@
     "body sidebar"
     "footer footer";
     }
+      .header{
+        grid-template-columns: 3fr 7fr 3fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "brand nav tools";
+      }
+      .hero{
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "hero1 hero2";
+      }
+      .body{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "artfea artlist";
+      }
   }
