@@ -46,7 +46,7 @@
       grid-area: body;
       box-sizing: border-box;
       display: grid;
-      grid-gap: 5px;
+      grid-gap: 15px;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 2fr;
       grid-template-areas:
@@ -68,6 +68,7 @@
     }
   
     .footer {
+        background-color: rgb(117, 124, 124);
       grid-area: footer;
       box-sizing: border-box;
       display: grid;
@@ -80,17 +81,27 @@
       text-align: center;
     }
     .nav {
+     text-align: justify;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
       grid-area: nav;
       box-sizing: border-box;
     }
     .tools{
       grid-area: tools;
       box-sizing: border-box;
+      display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
     }
     .hero-feature{
+    text-align: justify;
       grid-area: hero1;
       box-sizing: border-box;
       display: none;
@@ -109,8 +120,11 @@
   
     }
     .article-features{
+        font-size: 20px;
       grid-area: artfea;
       box-sizing: border-box;
+      text-align: justify;
+      text-justify: inter-word;
     }
     .inner-advert{
       grid-area: inadv;
@@ -214,5 +228,8 @@
           grid-template-rows: 1fr;
           grid-template-areas:
           "artfea artlist";
+        }
+        .article-listing{
+            border-left: 6px  grey;
         }
     }
