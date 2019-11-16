@@ -1,0 +1,218 @@
+/*Pirmā līmeņa bērni*/
+.header {
+    background-color: rgb(117, 124, 124);
+    height: 200px;
+      grid-area: header;
+      box-sizing: border-box;
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+      "brand brand"
+      "nav tools";
+        }
+  
+    .hero {
+      position: relative;
+      grid-area: hero;
+      box-sizing: border-box;
+        width: 100%;
+      /* background-image: url(/zabaki.jpg); */
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+      "hero2"
+      "hero2";
+    }
+  
+    .hero::before {
+      background-image: url(/zabaki.jpg);
+      background-size: cover;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 1;
+      }
+      
+    .body {
+      grid-area: body;
+      box-sizing: border-box;
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 2fr;
+      grid-template-areas:
+      "artfea"
+      "inadv"
+      "artlist"
+    }
+  
+    .advert {
+      grid-area: advert;
+      box-sizing: border-box;
+      display: none;
+    }
+  
+    .sidebar {
+      grid-area: sidebar;
+      box-sizing: border-box;
+      display: none;
+    }
+  
+    .footer {
+      grid-area: footer;
+      box-sizing: border-box;
+      display: grid;
+  
+    }
+    /* Otrā līmeņa bērni */
+    .brand {
+      grid-area: brand;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+      grid-area: nav;
+      box-sizing: border-box;
+    }
+    .tools{
+      grid-area: tools;
+      box-sizing: border-box;
+    }
+    .hero-feature{
+      grid-area: hero1;
+      box-sizing: border-box;
+      display: none;
+      z-index: -1;
+      
+    }
+    .hero-call-to-action{
+      background-color: transparent;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+      grid-area: hero2;
+      box-sizing: border-box;
+      z-index: -1;
+      
+  
+    }
+    .article-features{
+      grid-area: artfea;
+      box-sizing: border-box;
+    }
+    .inner-advert{
+      grid-area: inadv;
+      box-sizing: border-box;
+    }
+    .article-listing{
+      grid-area: artlist;
+      box-sizing: border-box;
+    }
+  
+  
+    /*konteineri dažādiem ekrāna izmēriem*/
+  
+    .container {
+      font-size: 1.5em;
+      box-sizing: border-box;
+      height: auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 3fr 6fr 1fr;
+      grid-gap: 10px;
+      grid-template-areas:
+        "header"
+        "hero"
+        "body"
+        "footer";
+    }
+  
+    @media (min-width:576px){
+      .sidebar{display: block;}
+      .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 3fr 5fr 2fr 1fr ;
+      grid-gap: 10px;
+      grid-template-areas:
+        "header"
+        "hero"
+        "body"
+        "sidebar"
+        "footer";
+      }
+      .hero::before{
+          background-image: url(/zabaki2.jpg);
+      }
+      .hero-feature{
+        display: block;
+      }
+          .header{
+          grid-template-columns: 1fr 2fr 1fr;
+          grid-template-rows: 1fr;
+          grid-template-areas:
+          "brand nav tools";
+          }
+          .hero{
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-template-areas:
+          "hero1"
+          "hero2";
+          }
+          .body{
+          grid-template-columns: 3fr 1fr;
+          grid-template-rows: 2fr 4fr;
+          grid-template-areas:
+          "artfea inadv"
+          "artlist artlist";
+          }
+  
+    }
+  
+    @media (min-width: 992px){
+      .advert{display: block;}
+      .sidebar{ display: block;}
+      .inner-advert{display: none;}
+      .container{
+      grid-template-columns: 9fr 3fr;
+      grid-template-rows: 160px 4fr 6fr 2fr;
+      grid-gap: 5px;
+      grid-template-areas:
+      "header header"
+      "hero advert "
+      "body sidebar"
+      "footer footer";
+      }
+        .header{
+            height: 150px;
+          grid-template-columns: 2fr 7fr 3fr;
+          grid-template-rows: 1fr;
+          grid-template-areas:
+          "brand nav tools";
+        }
+        .hero{
+          grid-template-columns: 3fr 2fr;
+          grid-template-rows: 1fr;
+          grid-template-areas:
+          "hero1 hero2";
+        }
+        .body{
+          grid-template-columns: 1fr 3fr;
+          grid-template-rows: 1fr;
+          grid-template-areas:
+          "artfea artlist";
+        }
+    }
