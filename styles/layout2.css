@@ -1,7 +1,7 @@
 /*Pirmā līmeņa bērni*/
 .header {
     background-color: rgb(117, 124, 124);
-    height: 200px;
+    height: 100%;
       grid-area: header;
       box-sizing: border-box;
       display: grid;
@@ -211,7 +211,7 @@
       "footer footer";
       }
         .header{
-            height: 150px;
+            height: 100%;
           grid-template-columns: 2fr 7fr 3fr;
           grid-template-rows: 1fr;
           grid-template-areas:
