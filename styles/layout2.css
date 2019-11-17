@@ -15,10 +15,10 @@
   
     .hero {
       position: relative;
+    
       grid-area: hero;
       box-sizing: border-box;
         width: 100%;
-      /* background-image: url(/zabaki.jpg); */
       display: grid;
       grid-gap: 5px;
       grid-template-columns: 1fr;
@@ -29,7 +29,7 @@
     }
   
     .hero::before {
-      background-image: url(/zabaki3.jpg);
+      background-image: url(../zabaki3.jpg);
       background-size: cover;
       content: "";
       display: block;
@@ -87,7 +87,7 @@
      text-align: justify;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
       grid-area: nav;
@@ -105,6 +105,8 @@
     }
     .hero-feature{
     text-align: justify;
+    padding-top: 30px;
+    padding-bottom: 30px;
       grid-area: hero1;
       box-sizing: border-box;
       display: none;
@@ -174,8 +176,16 @@
         "sidebar"
         "footer";
       }
+      .nav {
+        text-align: justify;
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: column;
+       justify-content: center;
+       align-content: center;
+      }
       .hero::before{
-          background-image: url(/zabaki2.jpg);
+          background-image: url(../zabaki2.jpg);
       }
       .hero-feature{
         display: block;
@@ -218,7 +228,7 @@
       "footer footer";
       }
       hero::before{
-        background-image: url(/zabaki1.jpg);
+        background-image: url(../zabaki.jpg);
       }
         .header{
           height: 100%;
@@ -243,3 +253,4 @@
             border-left: 6px  grey;
         }
     }
+    
