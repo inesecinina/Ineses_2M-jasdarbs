@@ -43,6 +43,7 @@
       }
       
     .body {
+      color: rgb(57, 57, 63);
       grid-area: body;
       box-sizing: border-box;
       display: grid;
@@ -71,8 +72,9 @@
         background-color: rgb(117, 124, 124);
       grid-area: footer;
       box-sizing: border-box;
-      display: grid;
-  
+      display: flex;
+      flex-wrap: wrap;
+     flex-direction: row;
     }
     /* Otrā līmeņa bērni */
     .brand {
@@ -134,6 +136,7 @@
       grid-area: artlist;
       box-sizing: border-box;
     }
+    
   
   
     /*konteineri dažādiem ekrāna izmēriem*/
