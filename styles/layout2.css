@@ -29,7 +29,7 @@
     }
   
     .hero::before {
-      background-image: url(/zabaki.jpg);
+      background-image: url(/zabaki3.jpg);
       background-size: cover;
       content: "";
       display: block;
@@ -64,17 +64,18 @@
   
     .sidebar {
       grid-area: sidebar;
+      color: rgb(57, 57, 63);
       box-sizing: border-box;
       display: none;
+      text-align: justify;
+      text-justify: inter-word;
     }
   
     .footer {
-        background-color: rgb(117, 124, 124);
+      background-color: rgb(117, 124, 124);
       grid-area: footer;
       box-sizing: border-box;
       display: flex;
-      flex-wrap: wrap;
-     flex-direction: row;
     }
     /* Otrā līmeņa bērni */
     .brand {
@@ -133,8 +134,11 @@
       box-sizing: border-box;
     }
     .article-listing{
+      font-size: 20px;
       grid-area: artlist;
       box-sizing: border-box;
+      text-align: justify;
+      text-justify: inter-word;
     }
     
   
@@ -213,8 +217,11 @@
       "body sidebar"
       "footer footer";
       }
+      hero::before{
+        background-image: url(/zabaki1.jpg);
+      }
         .header{
-            height: 100%;
+          height: 100%;
           grid-template-columns: 2fr 7fr 3fr;
           grid-template-rows: 1fr;
           grid-template-areas:
